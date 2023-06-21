@@ -1,0 +1,425 @@
+.main_container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.landing_container {
+  display: flex;
+  background: url("../public/img/landing_bg.svg") no-repeat;
+  padding: 80px 32px 30px 34px;
+  align-items: center;
+  gap: 32px;
+  background-size: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.landing_left_sec {
+  max-width: 775px;
+}
+.landing_left_sec h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+}
+.landing_left_sec .underLine {
+  padding-left: 73px;
+  height: 100%;
+}
+.landing_left_sec p {
+  font-family: "Satoshi", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #555555;
+}
+.email_input_sec {
+  max-width: 682px;
+  width: 100%;
+  display: flex;
+  padding-top: 48px;
+}
+.email_input_submit {
+  margin-top: 48px;
+  align-items: center;
+  font-weight: 600;
+  margin-right: 149px;
+  display: flex;
+  justify-content: center;
+  height: 69px;
+}
+.email_input_sec input {
+  background: #f0f0f0;
+  border-radius: 8px 0px 0px 8px;
+  border: none;
+  width: 100%;
+  padding: 25px 33px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.email_input_sec input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: #666666;
+}
+.email_input_sec input:focus-visible {
+  outline: none;
+}
+.email_input_sec button {
+  background: #123ade;
+  border-radius: 0px 8px 8px 0px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 15px 56px;
+  line-height: 180%;
+  cursor: pointer;
+}
+.email_input_sec button:hover {
+  background: #123bdedd;
+}
+
+/* FAQ CSS */
+.faq_container {
+  background: url("../public/img/faq_bg.svg") no-repeat;
+  max-width: 1440px;
+  background-size: 100%;
+  margin: 0 auto;
+  font-family: "Satoshi", sans-serif;
+  padding: 130px 50px 80px 50px;
+}
+.faq_container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43px;
+  text-align: center;
+}
+.faq_container h1 span {
+  background: linear-gradient(90deg, #123ade 0%, #7812de 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.faq_container p {
+  max-width: 915px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #555555;
+}
+.faq_boxes_container {
+  padding-top: 64px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.faq_boxes_container .right_container {
+  padding-top: 130px;
+}
+.faq_box_sec img {
+  border-radius: 50%;
+}
+.faq_box_sec {
+  max-width: 643px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 7px 7px 0px rgba(0, 0, 0, 1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+.faq_title_des h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  padding-bottom: 8px;
+  text-align: left;
+}
+.faq_title_des p {
+  max-width: 531px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #555555;
+  text-align: left;
+  padding-top: 0;
+}
+.head_text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  background: linear-gradient(90deg, #123ade 0%, #7812de 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  padding-bottom: 16px;
+}
+.add_more_text {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(90deg, #123ade 31.22%, #7812de 106.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  padding-top: 64px;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* WAITLIST CSS */
+.join_waitlist_container {
+  background: url("../public/img/contact_bg.svg");
+  padding: 89px 0 77px 0;
+}
+.join_waitlist_container h1 {
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 118.52%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  max-width: 939px;
+  margin: 0 auto;
+}
+.join_waitlist_container button {
+  display: flex;
+  margin: 48px auto 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  background: #222222;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+.join_waitlist_container button:hover {
+  background: #ffffff;
+  color: #222222;
+}
+.footer_container {
+  background: #fff;
+  padding: 64px 0;
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #222222;
+}
+
+@media only screen and (max-width: 980px) {
+  .landing_container {
+    background: url("../public/img/landing_bg_tab.svg") no-repeat;
+    padding: 64px 0 0;
+    flex-direction: column;
+    gap: 64px;
+    max-width: 900px;
+    background-size: 100%;
+  }
+  .landing_left_sec h1 {
+    font-size: 32px;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 39px;
+    text-align: center;
+  }
+  .landing_left_sec p {
+    font-size: 16px;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 22px;
+  }
+  .landing_container img {
+    width: 404px;
+    height: 342.18px;
+  }
+  .email_input_sec {
+    max-width: 480px;
+  }
+  .email_input_sec input {
+    padding: 25px 23px;
+  }
+  .email_input_sec button {
+    padding: 19px 33px;
+  }
+  .email_input_submit {
+    margin-top: 48px;
+    align-items: center;
+    font-weight: 600;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    height: 72px;
+    font-size: 13px !important;
+  }
+
+  /* FAQ CSS */
+  .faq_container {
+    background: url("../public/img/faq_bg_tab.svg") no-repeat;
+    max-width: 900px;
+    background-size: 100%;
+    padding: 112px 0 48px 0;
+  }
+  .faq_container h1 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .faq_container p {
+    max-width: 631px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .faq_boxes_container {
+    padding-top: 64px;
+    flex-direction: column;
+    gap: 54px;
+  }
+  .faq_boxes_container .right_container {
+    padding-top: 0px;
+  }
+  .faq_box_sec {
+    max-width: 643px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 7px 5px 0px rgba(0, 0, 0, 1);
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  /* WAITLIST CSS */
+  .join_waitlist_container {
+    padding: 72px 0 72px 0;
+  }
+  .join_waitlist_container h1 {
+    font-size: 32px;
+    line-height: 118.52%;
+    max-width: 643px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .landing_container {
+    background: url("../public/img/landing_bg_mob.svg") no-repeat;
+    padding: 64px 10px 0;
+    gap: 50px;
+    max-width: 490px;
+    margin: 0 auto;
+    background-size: 100%;
+  }
+  .landing_left_sec h1 {
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 380px;
+    margin-bottom: 20px;
+  }
+  .landing_left_sec {
+    position: relative;
+  }
+  .landing_left_sec .underLine {
+    position: absolute;
+    padding-left: 150px;
+    top: -55px;
+    height: 100%;
+    width: 90%;
+  }
+  .landing_left_sec p {
+    font-size: 12px;
+    line-height: 16px;
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .landing_container img {
+    max-width: 396.49px;
+    width: 100%;
+    height: 335.82px;
+  }
+  .email_input_sec {
+    max-width: 480px;
+  }
+  .email_input_sec input {
+    padding: 28px 19px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .email_input_sec button {
+    padding: 22px 26px;
+    font-size: 14px;
+    line-height: 180%;
+  }
+
+  /* FAQ CSS */
+  .faq_container {
+    background: url("../public/img/faq_bg_mob.svg") no-repeat;
+    padding: 95px 10px 64px 10px;
+    margin-top: 36px;
+    background-size: 100%;
+  }
+  .faq_container h1 {
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 8px;
+  }
+  .faq_container p {
+    max-width: 399px;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .faq_boxes_container {
+    padding-top: 32px;
+    gap: 24px;
+  }
+  .head_text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .faq_box_sec {
+    max-width: 398px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 8px 8px 0px rgba(0, 0, 0, 1);
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  .faq_box_sec p {
+    padding: 0;
+  }
+  .add_more_text {
+    padding: 48px 0 0;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  /* WAITLIST CSS */
+  .join_waitlist_container {
+    background: url("../public/img/contact_bg_mob.svg") no-repeat;
+    padding: 47px 0 47px 0;
+  }
+  .join_waitlist_container h1 {
+    max-width: 329px;
+    font-size: 18px;
+    line-height: 118.52%;
+  }
+  .join_waitlist_container button {
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 24px auto 0;
+  }
+  .footer_container {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 70px;
+  }
+}
