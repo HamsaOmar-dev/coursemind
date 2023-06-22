@@ -21,7 +21,6 @@ const Landing = () => {
   } = useForm();
 
   const onSubmit = async (data: any) => {
-    console.log(data);
     setLoading(true);
     await axios
       .post("/api", data)
@@ -34,8 +33,6 @@ const Landing = () => {
         console.log(err);
       });
   };
-
-  console.log(successmsg);
 
   function scrollToTop() {
     if (typeof window !== "undefined") {
@@ -56,9 +53,14 @@ const Landing = () => {
             className={styles.underLine}
           />
           <p>
-            Empowering student success by seamlessly integrating Canvas data and
+            {/* Empowering student success by seamlessly integrating Canvas data and
             providing intelligent support through ChatGPT for a smarter learning
-            experience
+            experience */}
+            An AI Tool with complete context on your class data by extracting it
+            from Canvas that can answer any question
+            <br />
+            <br />
+            Sign Up for Early Access this Fall
           </p>
           {loading ? (
             <p className={styles.email_input_submit}>Loading...</p>
@@ -76,7 +78,8 @@ const Landing = () => {
                     pattern: {
                       value:
                         /^(?!.*@(?:|g(?:m(?:a(?:i(?:l)?)?)?)?)\.edu$).*@.*\.edu$/,
-                      message: "Please enter a valid school email address",
+                      message:
+                        "Please enter a valid school email address ending in .edu",
                     },
                   })}
                 />
@@ -95,9 +98,10 @@ const Landing = () => {
           Ask anything Get <span>Answers</span> in Seconds
         </h1>
         <p>
-          Ask the AI about anything related to your class Data and it will
-          provide you with valuable insights, explanations, and even
-          recommendations. Our Platform is here to assist your learning journey
+          Ask the AI about anything related to your class data and it will
+          provide you with valuable insights, explanations, and even reference
+          the class material.
+          {/* Our Platform is here to assist your learning journey */}
         </p>
         <div className={styles.faq_boxes_container}>
           <div className={styles.left_container}>
@@ -106,12 +110,12 @@ const Landing = () => {
               <FaqBox
                 image={faq_icon1}
                 title="What is the policy on late work?"
-                description="It may be subject to a grade penalty unless prior arrangements have been made with the instructor"
+                description="AI: It may be subject to a grade penalty unless prior arrangements have been made with the instructor"
               />
               <FaqBox
                 image={faq_icon2}
                 title="When is Hw2 due?"
-                description='Based on the information provided, the due date for "HW2" is Thursday, June 21st 2023 at 9am'
+                description="AI: The due date for Hw2 is Sunday, March 19 at 11:59pm"
               />
             </div>
           </div>
@@ -121,12 +125,12 @@ const Landing = () => {
               <FaqBox
                 image={faq_icon3}
                 title="Where is DNA found inside the cell?"
-                description="Photosynthesis is the process by which cells build proteins using the information encoded in DNA from transcriptions into translation"
+                description="AI: Photosynthesis is the process by which cells build proteins using the information encoded in DNA from transcriptions into translation"
               />
               <FaqBox
                 image={faq_icon4}
                 title="Can you provide resources for practicing calculus?"
-                description="Here are top 3 Materials to practicing Calculus based on your Data. Khan Academy, Calculus textbooks, MIT OpenCourseWare"
+                description="AI: Here are top 3 Materials to practicing Calculus based on your Data. Khan Academy, Calculus textbooks, MIT OpenCourseWare"
               />
             </div>
           </div>
@@ -134,7 +138,7 @@ const Landing = () => {
         <div className={styles.add_more_text}>And more...</div>
       </section>
       <section className={styles.join_waitlist_container}>
-        <h1>Get Early Access to your Personal AI Teaching Assistant</h1>
+        <h1>Get Early Access to Your Personal AI Teaching Assistant</h1>
         <button onClick={() => scrollToTop()}>Join the waitlist →</button>
       </section>
       <footer className={styles.footer_container}>
