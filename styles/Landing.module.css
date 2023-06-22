@@ -47,6 +47,25 @@
   justify-content: center;
   height: 69px;
 }
+.loading_text {
+  margin-top: 48px;
+  align-items: center;
+  font-weight: 600;
+  margin-right: 149px;
+  display: flex;
+  justify-content: center;
+  height: 69px;
+}
+.error_message {
+  align-items: center;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-right: 189px;
+  padding-top: 5px;
+  font-size: 16px !important;
+  color: red !important;
+}
 .email_input_sec input {
   background: #f0f0f0;
   border-radius: 8px 0px 0px 8px;
@@ -268,6 +287,16 @@
     height: 72px;
     font-size: 13px !important;
   }
+  .loading_text {
+    margin-top: 48px;
+    margin-right: 0;
+    height: 69px;
+  }
+  .error_message {
+    padding-top: 5px;
+    font-size: 14px !important;
+    color: red !important;
+  }
 
   /* FAQ CSS */
   .faq_container {
@@ -359,6 +388,16 @@
     padding: 22px 26px;
     font-size: 14px;
     line-height: 180%;
+  }
+  .loading_text {
+    margin-top: 48px;
+    margin-right: 0;
+    height: 69px;
+  }
+  .error_message {
+    padding-top: 5px !important;
+    font-size: 14px !important;
+    color: red !important;
   }
 
   /* FAQ CSS */

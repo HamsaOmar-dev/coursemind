@@ -82,11 +82,10 @@ const Landing = () => {
                   })}
                 />
                 <button>Join</button>
-                {/* <p className={styles.input_error_section}> */}
-                <p>
-                  {errors.companyEmail?.message?.toString()}
-                </p>
               </div>
+              <p className={styles.error_message}>
+                {errors.companyEmail?.message?.toString()}
+              </p>
             </form>
             // :
             // <div className={styles.email_input_submit}>Thank You for Your Submission!</div>
