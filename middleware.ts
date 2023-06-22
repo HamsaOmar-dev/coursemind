@@ -4,6 +4,8 @@ async function apiAccess(req: NextRequest, res: NextResponse) {
   const authorizedOrigins = [
     // "http://localhost:3000",
     "https://CourseMind-pi.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:3001",
   ];
   if (
     req.nextUrl.pathname.startsWith("/api") &&

@@ -22,17 +22,17 @@ const Landing = () => {
 
   const onSubmit = async (data: any) => {
     console.log(data);
-    // setLoading(true);
-    // await axios
-    //   .post("/api", data)
-    //   .then((res) => {
-    //     setServermsg(res.data);
-    //     setLoading(false);
-    setSuccessmsg(true);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    setLoading(true);
+    await axios
+      .post("/api", data)
+      .then((res) => {
+        setServermsg(res.data);
+        setLoading(false);
+        setSuccessmsg(true);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   console.log(successmsg);
@@ -61,13 +61,12 @@ const Landing = () => {
             experience
           </p>
           {loading ? (
-            <p className={styles.loading_text}>Loading...</p>
+            <p className={styles.email_input_submit}>Loading...</p>
           ) : successmsg ? (
             <p className={styles.email_input_submit}>{servermsg}</p>
           ) : (
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles.email_input_sec}>
-                {/* <input type="email" placeholder="Enter your email address" /> */}
                 <input
                   placeholder="Enter your email address"
                   type="text"
@@ -84,19 +83,10 @@ const Landing = () => {
                 <button>Join</button>
               </div>
               <p className={styles.error_message}>
-                {errors.companyEmail?.message?.toString()}
+                {errors.Email?.message?.toString()}
               </p>
             </form>
-            // :
-            // <div className={styles.email_input_submit}>Thank You for Your Submission!</div>
           )}
-          {/* {true ?
-            <div className={styles.email_input_sec}>
-              <input type="email" placeholder="Enter your email address" />
-              <button>Join</button>
-            </div> :
-            <div className={styles.email_input_submit}>Thank You for Your Submission!</div>
-          } */}
         </div>
         <Image src="img/man_with_pc.svg" alt="man" height={454} width={537} />
       </section>
