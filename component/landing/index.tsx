@@ -97,12 +97,6 @@ const Landing = () => {
                     className={styles.input_container}
                     {...register("Schoolterm", {
                       required: "Required",
-                      // pattern: {
-                      //   value:
-                      //     /^(?!.*@(?:|g(?:m(?:a(?:i(?:l)?)?)?)?)\.edu$).*@.*\.edu$/,
-                      //   message:
-                      //     "Please enter a valid school email address ending in .edu",
-                      // },
                     })}
                   />
                   <p className={styles.error_message}>

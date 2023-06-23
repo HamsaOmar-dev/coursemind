@@ -1,1 +1,1 @@
-# coursemind
+# Coursemind
