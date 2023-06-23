@@ -83,10 +83,27 @@ const Landing = () => {
                     },
                   })}
                 />
+                <input
+                  placeholder="What School Term would you like to have access?(Summer 2023, Fall 2023, Spring 2024)"
+                  type="text"
+                  className={styles.input_container}
+                  {...register("Schoolterm", {
+                    required: "Required",
+                    // pattern: {
+                    //   value:
+                    //     /^(?!.*@(?:|g(?:m(?:a(?:i(?:l)?)?)?)?)\.edu$).*@.*\.edu$/,
+                    //   message:
+                    //     "Please enter a valid school email address ending in .edu",
+                    // },
+                  })}
+                />
                 <button>Join</button>
               </div>
               <p className={styles.error_message}>
                 {errors.Email?.message?.toString()}
+              </p>
+              <p className={styles.error_message}>
+                {errors.Schoolterm?.message?.toString()}
               </p>
             </form>
           )}

@@ -6,6 +6,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     handleGet(req, res);
   } else if (req.method === "POST") {
     handlePost(req, res);
+  } else if (req.method === "DELETE") {
+    handleDelete(req, res);
   } else {
     res.status(405).send({ message: "Method not allowed" });
   }
@@ -26,6 +28,7 @@ async function handlePost(req: NextApiRequest, res: NextApiResponse) {
     .create({
       data: {
         email: req.body.Email,
+        schoolTerm: req.body.Schoolterm,
       },
     })
     .then(async () => {
@@ -41,4 +44,14 @@ async function handlePost(req: NextApiRequest, res: NextApiResponse) {
         res.json(err);
       }
     });
+}
+
+async function handleDelete(req: NextApiRequest, res: NextApiResponse) {
+  await prisma.email
+    .deleteMany()
+    .then((data: any) => {
+      res.json("All Emails deleted from DB");
+      console.log("All Emails deleted from DB");
+    })
+    .catch((err: any) => console.log(err));
 }
