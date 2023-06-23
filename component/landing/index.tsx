@@ -59,52 +59,58 @@ const Landing = () => {
             An AI Tool with complete context on your class data by extracting it
             from Canvas that can answer any question
             <br />
-            <br />
-            Sign Up for Early Access this Fall
           </p>
           {loading ? (
             <p className={styles.email_input_submit}>Loading...</p>
-          ) : successmsg ? (
-            <p className={styles.email_input_submit}>{servermsg}</p>
-          ) : (
-            <form onSubmit={handleSubmit(onSubmit)}>
+            ) : successmsg ? (
+              <p className={styles.email_input_submit}>{servermsg}</p>
+              ) : (
+                <form
+                onSubmit={handleSubmit(onSubmit)}
+                className={styles.form_container}
+                >
+                <div className={styles.sign_up_text}>Sign Up for Early Access this Fall</div>
               <div className={styles.email_input_sec}>
-                <input
-                  placeholder="Enter your email address"
-                  type="text"
-                  className={styles.input_container}
-                  {...register("Email", {
-                    required: "Required",
-                    pattern: {
-                      value:
-                        /^(?!.*@(?:|g(?:m(?:a(?:i(?:l)?)?)?)?)\.edu$).*@.*\.edu$/,
-                      message:
-                        "Please enter a valid school email address ending in .edu",
-                    },
-                  })}
-                />
-                <input
-                  placeholder="What School Term would you like to have access?(Summer 2023, Fall 2023, Spring 2024)"
-                  type="text"
-                  className={styles.input_container}
-                  {...register("Schoolterm", {
-                    required: "Required",
-                    // pattern: {
-                    //   value:
-                    //     /^(?!.*@(?:|g(?:m(?:a(?:i(?:l)?)?)?)?)\.edu$).*@.*\.edu$/,
-                    //   message:
-                    //     "Please enter a valid school email address ending in .edu",
-                    // },
-                  })}
-                />
+                <div>
+                  <input
+                    placeholder="Enter your email address"
+                    type="text"
+                    className={styles.input_container}
+                    {...register("Email", {
+                      required: "Required",
+                      pattern: {
+                        value:
+                          /^(?!.*@(?:|g(?:m(?:a(?:i(?:l)?)?)?)?)\.edu$).*@.*\.edu$/,
+                        message:
+                          "Please enter a valid school email address ending in .edu",
+                      },
+                    })}
+                  />
+                  <p className={styles.error_message}>
+                    {errors.Email?.message?.toString()}
+                  </p>
+                </div>
+                <div>
+                  <input
+                    placeholder="What School Term would you like to have access?(Summer 2023, Fall 2023, Spring 2024)"
+                    type="text"
+                    className={styles.input_container}
+                    {...register("Schoolterm", {
+                      required: "Required",
+                      // pattern: {
+                      //   value:
+                      //     /^(?!.*@(?:|g(?:m(?:a(?:i(?:l)?)?)?)?)\.edu$).*@.*\.edu$/,
+                      //   message:
+                      //     "Please enter a valid school email address ending in .edu",
+                      // },
+                    })}
+                  />
+                  <p className={styles.error_message}>
+                    {errors.Schoolterm?.message?.toString()}
+                  </p>
+                </div>
                 <button>Join</button>
               </div>
-              <p className={styles.error_message}>
-                {errors.Email?.message?.toString()}
-              </p>
-              <p className={styles.error_message}>
-                {errors.Schoolterm?.message?.toString()}
-              </p>
             </form>
           )}
         </div>
