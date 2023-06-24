@@ -84,6 +84,19 @@
   font-size: 16px;
   line-height: 19px;
 }
+.input_container {
+  background: #f0f0f0;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  padding: 25px 10px 25px 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.input_container:focus-visible {
+  outline: none;
+}
 .email_input_sec input::placeholder {
   font-family: "Montserrat", sans-serif;
   color: #666666;

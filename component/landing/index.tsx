@@ -25,7 +25,7 @@ const Landing = () => {
     await axios
       .post("/api", data)
       .then((res) => {
-        setServermsg(res.data);
+        setServermsg(res.data.name);
         setLoading(false);
         setSuccessmsg(true);
       })
@@ -62,14 +62,16 @@ const Landing = () => {
           </p>
           {loading ? (
             <p className={styles.email_input_submit}>Loading...</p>
-            ) : successmsg ? (
-              <p className={styles.email_input_submit}>{servermsg}</p>
-              ) : (
-                <form
-                onSubmit={handleSubmit(onSubmit)}
-                className={styles.form_container}
-                >
-                <div className={styles.sign_up_text}>Sign Up for Early Access this Fall</div>
+          ) : successmsg ? (
+            <p className={styles.email_input_submit}>{servermsg}</p>
+          ) : (
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className={styles.form_container}
+            >
+              <div className={styles.sign_up_text}>
+                Sign Up for Early Access this Fall
+              </div>
               <div className={styles.email_input_sec}>
                 <div>
                   <input
@@ -91,14 +93,18 @@ const Landing = () => {
                   </p>
                 </div>
                 <div>
-                  <input
-                    placeholder="What School Term would you like to have access?(Summer 2023, Fall 2023, Spring 2024)"
-                    type="text"
+                  <select
+                    id="Schoolterm"
                     className={styles.input_container}
                     {...register("Schoolterm", {
                       required: "Required",
                     })}
-                  />
+                  >
+                    <option value="" disabled selected hidden>What School Term would you like to have access?(Summer 2023, Fall 2023, Spring 2024)</option>
+                    <option value="summer2023">Summer 2023</option>
+                    <option value="fall2023">Fall 2023</option>
+                    <option value="spring2024">Spring 2024</option>
+                  </select>
                   <p className={styles.error_message}>
                     {errors.Schoolterm?.message?.toString()}
                   </p>
