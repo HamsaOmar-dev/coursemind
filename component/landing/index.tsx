@@ -25,7 +25,7 @@ const Landing = () => {
     await axios
       .post("/api", data)
       .then((res) => {
-        setServermsg(res.data.name);
+        setServermsg(res.data);
         setLoading(false);
         setSuccessmsg(true);
       })
@@ -97,7 +97,9 @@ const Landing = () => {
                       required: "Required",
                     })}
                   >
-                    <option value="" disabled selected hidden>What School Term would you like to have access?</option>
+                    <option value="" disabled selected hidden>
+                      What School Term would you like to have access?
+                    </option>
                     <option value="summer2023">Summer 2023</option>
                     <option value="fall2023">Fall 2023</option>
                     <option value="spring2024">Spring 2024</option>
