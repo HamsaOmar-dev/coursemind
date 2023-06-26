@@ -10,6 +10,7 @@ async function apiAccess(req: NextRequest, res: NextResponse) {
     req.nextUrl.pathname.startsWith("/api") &&
     !authorizedOrigins.includes(req.nextUrl.origin)
   ) {
+    console.log("Origin Unauthorized");
     return NextResponse.json("Origin Unauthorized");
   }
   return NextResponse.next();
