@@ -8,6 +8,7 @@ async function apiAccess(req: NextRequest, res: NextResponse) {
     "https://www.coursemind.co",
     "https://coursemind.co",
   ];
+  console.log(req.nextUrl);
   if (
     req.nextUrl.pathname.startsWith("/api") &&
     !authorizedOrigins.includes(req.nextUrl.origin)
