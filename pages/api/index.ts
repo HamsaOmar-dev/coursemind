@@ -50,8 +50,8 @@ async function handleDelete(req: NextApiRequest, res: NextApiResponse) {
   await prisma.email
     .deleteMany()
     .then((data: any) => {
-      res.json("All Emails deleted from DB");
       console.log("All Emails deleted from DB");
+      res.json("All Emails deleted from DB");
     })
     .catch((err: any) => console.log(err));
 }
