@@ -11,6 +11,7 @@ const allowedOrigins = [
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const origin: any = req.headers.host;
+  console.log(origin);
 
   if (allowedOrigins.includes(origin)) {
     if (req.method === "GET") {
