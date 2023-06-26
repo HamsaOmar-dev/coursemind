@@ -25,7 +25,7 @@ const Landing = () => {
     await axios
       .post("/api", data)
       .then((res) => {
-        setServermsg(res.data.name);
+        setServermsg(res.data);
         setLoading(false);
         setSuccessmsg(true);
       })
@@ -53,9 +53,6 @@ const Landing = () => {
             className={styles.underLine}
           />
           <p>
-            {/* Empowering student success by seamlessly integrating Canvas data and
-            providing intelligent support through ChatGPT for a smarter learning
-            experience */}
             An AI Tool with complete context on your class data by extracting it
             from Canvas that can answer any question
             <br />
@@ -100,7 +97,9 @@ const Landing = () => {
                       required: "Required",
                     })}
                   >
-                    <option value="" disabled selected hidden>What School Term would you like to have access?(Summer 2023, Fall 2023, Spring 2024)</option>
+                    <option value="" disabled selected hidden>
+                      What School Term would you like to have access?
+                    </option>
                     <option value="summer2023">Summer 2023</option>
                     <option value="fall2023">Fall 2023</option>
                     <option value="spring2024">Spring 2024</option>
@@ -124,7 +123,6 @@ const Landing = () => {
           Ask the AI about anything related to your class data and it will
           provide you with valuable insights, explanations, and even reference
           the class material.
-          {/* Our Platform is here to assist your learning journey */}
         </p>
         <div className={styles.faq_boxes_container}>
           <div className={styles.left_container}>
@@ -133,12 +131,12 @@ const Landing = () => {
               <FaqBox
                 image={faq_icon1}
                 title="What is the policy on late work?"
-                description="AI: It may be subject to a grade penalty unless prior arrangements have been made with the instructor"
+                description="AI: It may be subject to a grade penalty unless prior arrangements have been made with the instructor (syllabus.txt)"
               />
               <FaqBox
                 image={faq_icon2}
                 title="When is Hw2 due?"
-                description="AI: The due date for Hw2 is Sunday, March 19 at 11:59pm"
+                description="AI: The due date for Hw2 is Sunday, March 19 at 11:59pm (hw2.pdf)"
               />
             </div>
           </div>
@@ -148,12 +146,12 @@ const Landing = () => {
               <FaqBox
                 image={faq_icon3}
                 title="Where is DNA found inside the cell?"
-                description="AI: Photosynthesis is the process by which cells build proteins using the information encoded in DNA from transcriptions into translation"
+                description="AI: DNA (Deoxyribonucleic acid) is found inside the nucleus of eukaryotic cells (textbook)"
               />
               <FaqBox
                 image={faq_icon4}
-                title="Can you provide resources for practicing calculus?"
-                description="AI: Here are top 3 Materials to practicing Calculus based on your Data. Khan Academy, Calculus textbooks, MIT OpenCourseWare"
+                title="What is the formula to find the hypotenuse of a right triangle?"
+                description="AI: The formula to find the hypotenuse of a right triangle is c = √(a^2 + b^2) (textbook)"
               />
             </div>
           </div>
