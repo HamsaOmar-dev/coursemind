@@ -93,6 +93,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  color: #666666 !important;
+}
+.input_container option{
+  color: #666666;
 }
 .input_container:focus-visible {
   outline: none;
