@@ -5,6 +5,8 @@ async function apiAccess(req: NextRequest, res: NextResponse) {
     "http://localhost:3000",
     "http://localhost:3001",
     "https://coursemind-blush.vercel.app",
+    "https://www.coursemind.co",
+    "https://coursemind.co",
   ];
   if (
     req.nextUrl.pathname.startsWith("/api") &&
