@@ -92,7 +92,7 @@ const Landing = () => {
                     {errors.Email?.message?.toString()}
                   </p>
                 </div>
-                <div>
+                <div className={styles.select_box}>
                   <select
                     id="Schoolterm"
                     className={styles.input_container}

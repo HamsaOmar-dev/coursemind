@@ -94,10 +94,22 @@
   font-size: 16px;
   line-height: 19px;
   color: #666666 !important;
+  font-family: 'Montserrat', sans-serif;
 }
 .input_container option{
   color: #666666;
 }
+.select_box select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('https://img.icons8.com/ios/50/000000/expand-arrow--v1.png');
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  padding-right: 55px;
+  background-size: 17px;
+}
+
 .input_container:focus-visible {
   outline: none;
 }
