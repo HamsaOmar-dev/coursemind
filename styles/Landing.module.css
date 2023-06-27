@@ -311,7 +311,7 @@
   .email_input_sec {
     max-width: 480px;
   }
-  .email_input_sec input {
+  .email_input_sec input, .input_container {
     padding: 25px 23px;
   }
   .email_input_sec button {
@@ -402,9 +402,14 @@
   .landing_left_sec .underLine {
     position: absolute;
     padding-left: 150px;
-    top: -55px;
+    top: -150px;
     height: 100%;
     width: 90%;
+  }
+  .sign_up_text {
+    font-size: 14px;
+    padding-top: 35px;
+    padding-bottom: 20px;
   }
   .landing_left_sec p {
     font-size: 12px;
@@ -421,13 +426,13 @@
   .email_input_sec {
     max-width: 480px;
   }
-  .email_input_sec input {
-    padding: 28px 19px;
+  .email_input_sec input, .input_container {
+    padding: 22px 19px;
     font-size: 12px;
     line-height: 14px;
   }
   .email_input_sec button {
-    padding: 22px 26px;
+    padding: 16px 26px;
     font-size: 14px;
     line-height: 180%;
   }
