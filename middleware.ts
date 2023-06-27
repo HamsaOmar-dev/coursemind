@@ -5,7 +5,10 @@ async function apiAccess(req: NextRequest, res: NextResponse) {
     "http://localhost:3000",
     "http://localhost:3001",
     "https://coursemind-blush.vercel.app",
+    "https://www.coursemind.co",
+    "https://coursemind.co",
   ];
+  console.log(req.headers.get("referer"));
   if (
     req.nextUrl.pathname.startsWith("/api") &&
     !authorizedOrigins.includes(req.nextUrl.origin)

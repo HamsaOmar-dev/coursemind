@@ -72,7 +72,7 @@ const Landing = () => {
               <div className={styles.email_input_sec}>
                 <div>
                   <input
-                    placeholder="Enter your email address"
+                    placeholder="Enter your school email address"
                     type="text"
                     className={styles.input_container}
                     {...register("Email", {
@@ -98,7 +98,7 @@ const Landing = () => {
                     })}
                   >
                     <option value="" disabled selected hidden>
-                      What School Term would you like to have access?
+                      What school term would you like to have access?
                     </option>
                     <option value="summer2023">Summer 2023</option>
                     <option value="fall2023">Fall 2023</option>
@@ -117,7 +117,7 @@ const Landing = () => {
       </section>
       <section className={styles.faq_container}>
         <h1>
-          Ask anything Get <span>Answers</span> in Seconds
+          Ask anything, Get <span>Answers</span> in Seconds
         </h1>
         <p>
           Ask the AI about anything related to your class data and it will
