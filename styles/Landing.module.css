@@ -408,8 +408,9 @@
   }
   .sign_up_text {
     font-size: 12px;
-    padding-top: 35px;
+    padding-top: 16px;
     padding-bottom: 20px;
+    text-align: center;
   }
   .landing_left_sec p {
     font-size: 12px;
