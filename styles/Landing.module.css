@@ -303,6 +303,7 @@
   }
   .sign_up_text{
     font-size: 16px;
+    text-align: center;
   }
   .landing_container img {
     width: 404px;
@@ -410,7 +411,6 @@
     font-size: 12px;
     padding-top: 16px;
     padding-bottom: 20px;
-    text-align: center;
   }
   .landing_left_sec p {
     font-size: 12px;
