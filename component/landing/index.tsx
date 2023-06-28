@@ -23,7 +23,7 @@ const Landing = () => {
   const onSubmit = async (data: any) => {
     setLoading(true);
     await axios
-      .post("/api", data)
+      .post("/api/email", data)
       .then((res) => {
         setServermsg(res.data);
         setLoading(false);
