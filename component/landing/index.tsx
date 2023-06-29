@@ -71,7 +71,7 @@ const Landing = () => {
               </div>
               <div className={styles.email_input_sec}>
                 <div>
-                  <input
+                  {/* <input
                     placeholder="Enter your school email address"
                     type="text"
                     className={styles.input_container}
@@ -84,7 +84,20 @@ const Landing = () => {
                           "Please enter a valid school email address ending in .edu",
                       },
                     })}
+                  /> */}
+                  <input
+                    placeholder="Enter your email address"
+                    type="text"
+                    className={styles.input_container}
+                    {...register("Email", {
+                      required: "Required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Please enter a valid email address",
+                      },
+                    })}
                   />
+
                   <p className={styles.error_message}>
                     {errors.Email?.message?.toString()}
                   </p>
